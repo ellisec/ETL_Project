@@ -1,0 +1,36 @@
+h1 {
+    position: below;
+    font-size: 40px;
+    
+  }
+
+body {
+    background-color: rgba(203, 234, 250, 0.774);
+  }
+
+.whitespace {
+  padding: 20px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  text-align: center;
+}
+
+#backgroundimage {
+    background-image: url("default.png");
+    width: 80vw;
+    height: 50vh; 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: center;
+    display: inline-block;
+}
+
+table,tr, th, td {
+  border: 1px solid rgb(2, 9, 19);
+  text-align: left;
+  font-size: 15px;
+}
