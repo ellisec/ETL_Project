@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#"><strong>AppStore vs GooglePlay</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+    </nav>
+
+    <div style="text-align:center;">
+        <div id="backgroundimage"></div>
+    </div>
+
+    <div style="text-align:center;" class="row whitespace">
+        <h2 style="padding-left: 55px; padding-right: 100px ; padding-top: 2%; font-size: 110%"><strong>Project
+                Overview</strong></h2>
+        <!-- Overview -->
+        <div class="col-sm-12">
+            <blockquote class="blockquote">
+                <h3 class="text-left"
+                    style="top:40px;width:100%;padding-left: 35px;padding-right: 28px ;padding-top: 1%;font-size: 80%;font-weight: normal">
+                    When it comes to mobile ecosystems, there are two giants locked in a battle, not only for revenue,
+                    but also for the hearts and minds of developers and consumers alike. The purpose of our project is
+                    to extract data sets of Google’sPlay Store and Apple’s App Store for year 2017 from Kaggle data
+                    source , transform by normalizing both the datasets and load the datasets to a database. Ultimately,
+                    the transformed data set will allow forbetter understanding of the relative variances between
+                    vendors.
+                </h3>
+            </blockquote>
+        </div>
+    </div>
+
+    <div style="text-align:center">
+        <h4 style="display:inline-block; font-size: 120%;" class="row whitespace"><strong>Select Data from
+                Dropdown</strong></h4>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <select id="selectMe">
+                            <option value="GooglePlay_Plot">GooglePlay Plot Apps by Genre</option>
+                            <option value="AppStore_Plot">AppStore Plot Apps by Genre</option>
+                            <option value="GooglePlay_Ratings_Plot">GooglePlay Ratings Plot</option>
+                            <option value="AppStore_Ratings_Plot">AppStore Ratings Plot</option>
+                            <option value="Free_Paid_Plot">Free Vs Paid Plots</option>
+                        </select>
+                        <div id="GooglePlay_Plot" class="group">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div align="center"
+                                            style="position:absolute;top:40px;width:100%;text-align:center">
+                                            <img width="500" height="auto" src="./GooglePlay_Apps_by_Genre.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p align="center" style="position:absolute;top:40px;width:100%;text-align:left">
+                                            The purpose of this bar chart is to showcase the distribution of 9000+
+                                            applications based on their genres from a dataset of GooglePlayStore for the
+                                            year 2017.We could visualize that highest number of
+                                            applications(~2000) falls under "Reference" genre and next highest
+                                            applications count(~1250) is bagged by "Utilities" genre.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="AppStore_Plot" class="group">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div align="center"
+                                            style="position:absolute;top:40px;width:100%;text-align:center">
+                                            <img width="500" height="auto" src="./AppStore_Apps_by_Genre.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p align="center" style="position:absolute;top:40px;width:100%;text-align:left">
+                                            The purpose of this bar chart is to showcase the distribution of 7500+
+                                            applications based on their
+                                            genres from a dataset of Apple AppStore for the year 2017.We could visualize
+                                            that highest number of
+                                            applications(3500+) falls under "Games" genre and for the remaining genres,
+                                            none of them recorded
+                                            more than 500 applications each.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="GooglePlay_Ratings_Plot" class="group">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div align="center"
+                                            style="position:absolute;top:40px;width:100%;text-align:center">
+                                            <img width="500" height="auto" src="./GooglePlay_Ratings_by_Genre.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p align="center" style="position:absolute;top:40px;width:100%;text-align:left">
+                                            The purpose of this plot is to show average user ratings for each genre
+                                            based on
+                                            the ratings for each individual application on Google PlayStore for the year
+                                            2017.
+                                            We could observe that "Education" genre has secured highest average rating
+                                            of
+                                            "4.32". All together, only four genres managed to maintain an average of
+                                            "4+" user rating.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="AppStore_Ratings_Plot" class="group">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div align="center"
+                                            style="position:absolute;top:40px;width:100%;text-align:center">
+                                            <img width="500" height="auto" src="./AppStore_Ratings_by_Genre.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p align="center" style="position:absolute;top:40px;width:100%;text-align:left">
+                                            The purpose of this plot is to show average user ratings for each genre
+                                            based on
+                                            the ratings for each individual application on Google PlayStore for the year
+                                            2017.
+                                            We could observe that "Productivity" genre has secured highest average
+                                            rating of
+                                            "4.00". Also, this is the only genre that managed to touch "4" as average
+                                            user rating.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Free_Paid_Plot" class="group">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div align="center"
+                                            style="position:absolute;top:40px;width:90%;text-align:center">
+                                            <img width="500" height="auto" src="./AppStore_Vs_PlayStore_Free_Paid.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p align="center"
+                                            style="position:absolute;top:260px;width:100%;text-align:left">
+                                            The purpose of this figure is to show the AppStore's and PlayStore's
+                                            percentages of free and paid category applications for the year 2017.
+                                            We could see that for "Google PlayStore", there is a huge difference between
+                                            the percentages of free and paid apps whereas for "Apple AppStore", we could
+                                            only see a slight difference of less than five percent.
+                                            This clearly says that Google managed to maintained a higher ratio of free
+                                            apps than paid apps but, Apple did not show any considerable difference of
+                                            ratios between paid and free apps.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.group').hide();
+            $('#Apple_Data').show();
+            $('#selectMe').change(function () {
+                $('.group').hide();
+                $('#' + $(this).val()).show();
+            })
+
+        });
+    </script>
+</body>
+
+</html>
